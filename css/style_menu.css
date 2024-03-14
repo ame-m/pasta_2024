@@ -213,7 +213,7 @@ header .title p {
 
 } */
 
-.merchandise {
+/* .merchandise {
  
     margin-top: 90px;
     margin-bottom: 50px;
@@ -224,7 +224,7 @@ header .title p {
     position: relative;
 
 
-}
+} */
 /*パスタとサイドメニューのタブの設定*/
 .merchandise_tab{
     position: relative;
@@ -268,14 +268,41 @@ header .title p {
 
 
 /*タブで分けたパスタとサイドメニューの切り替え設定*/
-/* .merchandise section{
-    display: none;
-    overflow: hidden;
-    
-    transition: 1s;
+
+.merchandise {
+ 
+    margin-top: 90px;
+    margin-bottom: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+}
+
+/* .merchandise {
+ 
+    margin-top: 90px;
+    margin-bottom: 50px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+
 } */
 
+
+
 .merchandise section{
+    display: none;
+    /* overflow: hidden; */
+    
+    transition: 1s;
+}
+
+/* .merchandise section{
     width: 100%;
     border-top: 2px solid rgb(255, 193, 105);
     border-right: 2px solid rgb(255, 193, 105);
@@ -286,15 +313,15 @@ header .title p {
     left: 0;
     
     visibility:hidden;
-    /* overflow: hidden; */
+    overflow: hidden;
     transform: scale(1.0 , 0);
     transform-origin: top;
-    /* height: 0; */
+    height: 0;
     transition: 1s;
-}
+} */
 
 /*タブが押されたときその内容の.merchandise sectionをz-indexで.merchandise_tab ulより下に表示させてborderの線を.merchandise_tab ul（.merchandise_tab ulの背景を白で塗っているので）と重なったとこだけ表示させないようにした*/
-/* .merchandise section.active{
+.merchandise section.active{
    
     display: block;
    
@@ -304,9 +331,9 @@ header .title p {
     border-bottom: 2px solid rgb(255, 193, 105);
     z-index: -1;
     transition: 1s;
-} */
+}
 
-.merchandise section.active{
+/* .merchandise section.active{
     height: 100vh;
     visibility:visible;
    
@@ -319,14 +346,14 @@ header .title p {
     transform-origin: top;
     z-index: -1;
     transition: 1s;
-}
+} */
 
-/* section{
+section{
     display: none;
 }
 section.active{
     display: block;
-} */
+}
 
 
 .merchandise .pasuta_area{
