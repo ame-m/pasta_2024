@@ -1,0 +1,325 @@
+.info_containar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.info_contents {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* width: 80%; */
+}
+
+.space {
+    overflow: hidden;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    width: 100%;
+    height: 10px;
+    position: relative;
+}
+
+.space::after {
+    content: "";
+    position: absolute;
+    top: calc(50% - 0.005px);
+    left: 0;
+    width: 100%;
+    height: 0.01px;
+    border: 1.5px dashed rgb(255, 168, 45);
+    /* background-color: rgb(255, 168, 45); */
+}
+
+/* .info_contents .space span{
+
+width: 100%;
+height: 1px;
+border: 1.5px dashed ;
+} */
+/*番上のタイトルテキストが入った箱*/
+.info_title {
+    height: 100px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.info_title .title_text{
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #fff;
+    position: relative;
+}
+/*一番上のタイトルテキスト*/
+.info_title p {
+    /* padding:20px; */
+    /* height: 70%; */
+    width: 300px;
+    text-align: center;
+    /* background-color: #fff; */
+    color: #b74c00;
+    /* color: #041a57; */
+    font-size: 1.3em;
+    position: relative;
+
+    font-family: "Shippori Mincho B1", serif;
+  font-weight: 450;
+  font-style: normal;
+  
+
+  /* font-family: "Kaisei Opti", serif;
+  font-weight: 400;
+  font-style: normal; */
+
+  /* background-color: #ffbf00a3; */
+  /* overflow: hidden;
+  border-bottom:2px dashed #fff ;
+  border-top: 2px dashed #fff; */
+}
+/*タイトルの両端に三角*/
+/* .info_title p::after{
+    content:"";
+    position: absolute;
+    top:0;
+    
+    right:calc(-19%);
+    width: 30%;
+    height: 100%;
+    transform: rotate(60deg);
+    background-color: #ff8310b1;
+   
+}
+.info_title p::before{
+    content:"";
+    position: absolute;
+    top:0;
+    
+    left:calc(-19%);
+    width: 30%;
+    height: 100%;
+    transform: rotate(60deg);
+    background-color: #ff8310b1;
+   
+} */
+/*タイトルをリボン*/
+
+/* .info_title .title_text::after,.info_title .title_text::before{
+    position: absolute;
+  content: '';
+    width: 0px;
+  height: 0px;
+  z-index: 1;
+}
+
+.info_title .title_text::after{
+
+    top: calc(0%);
+  right: -1px;
+  border-width: 50px 25px 50px 0px;
+  border-color: transparent #ffffff transparent transparent;
+  border-style: solid;
+
+  
+}
+.info_title .title_text::before{
+
+    top: calc(0%);
+    left: -1px;
+    border-width: 50px 0px 50px 25px;
+    border-color: transparent transparent transparent #ffffff;
+    border-style: solid;
+  
+} */
+
+/* .shippori-mincho b1-normal { font-family: "しっぽり明朝 B1", serif; font-size: 400; font-style: normal;  } */
+/*一番上のタイトルのオレンジの背景の三本線が入った箱*/
+.info_title .bg_color {
+    width: 100%;
+    height: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    top: calc(50% - 7.5px);
+    left: 0;
+    z-index: -1;
+}
+
+/*一番上のタイトルのオレンジの背景の三本線*/
+.info_title .bg_color span {
+    width: 100%;
+    height: 2px;
+    background-color: rgb(255, 168, 45);
+}
+
+ /*内装のこだわりや、味のこだわりなどの情報が入った箱*/
+ /* .info1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+} */
+
+/*2番目のインフォメーションのレイアウトを逆にする*/
+/* .info2 {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    width: 100%;
+} */
+
+
+/*内装のこだわりや、味のこだわりなどの情報が入った箱*/
+.info1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/*2番目のインフォメーションのレイアウトを逆にする*/
+.info2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.info1 .info_img1,
+.info2 .info_img1 {
+    
+    width: 47%;
+
+}
+
+.info1 .info_img1 img,
+.info2 .info_img1 img {
+    border: 2px solid rgb(255, 170, 0);
+    width: 100%;
+    height: 100%;
+}
+
+.info_text {
+    margin-top: 20px;
+    width: 80%;
+    /* height: 100%; */
+    color: #b74c00;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.info_text .sub_text {
+    /* margin-left: 10px; */
+    margin-top: 15px;
+    font-size: 1.5em;
+    text-align: left;
+   
+
+}
+.info_text .sub_text p{
+    font-family: "Kaisei Opti", serif;
+    font-weight: 400;
+    font-style: normal;
+
+    /* font-family: "Shippori Mincho B1", serif;
+    font-weight: 450;
+    font-style: normal; */
+}
+.main_text p{
+    margin-top: 30px;
+    line-height: 2.0;
+}
+
+/*営業時間・場所情報の位置調整*/
+.time {
+    color: #b74c00;
+    width: 100%;
+    height: 50px;
+}
+
+.time dl {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+
+}
+
+/*営業時間・場所情報の位置調整*/
+.time dl section {
+    width: fit-content;
+    display: block;
+    justify-content: center;
+}
+
+.time dl section div {
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+@media(min-width:768px) {
+    .info_title .title_text p {
+        width: 300px;
+        text-align: center;
+        /* background-color: #fff; */
+        color: #b74c00;
+        font-size: 1.4em;
+    }
+
+    .info_text .sub_text {
+        /* margin-left: 10px; */
+        font-size: 1.6em;
+        text-align: left;
+
+    }
+
+    .main_text {
+        margin-top: 0;
+        line-height: 1.8;
+    }
+    .main_text p{
+        margin-top: 10px;
+        line-height: 3.5;
+    }
+    
+
+    /*内装のこだわりや、味のこだわりなどの情報が入った箱*/
+    .info1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: normal;
+        width: 100%;
+    }
+
+    /*2番目のインフォメーションのレイアウトを逆にする*/
+    .info2 {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        align-items: normal;
+        width: 100%;
+    }
+
+    .info_text {
+        margin-top: 0;
+        width: 47%;
+        /* height: 100%; */
+        color: #b74c00;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+}

@@ -1,0 +1,592 @@
+@charset "utf-8";
+
+body,
+div,
+ul,
+li,
+dl,
+dt,
+dd,
+h1,
+h2,
+h3,
+p,
+table tr,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+body {
+
+    background-color: #ffffff;
+    font-family: 'Noto Serif JP', serif;
+}
+
+.header_menu_area {
+    width: 100%;
+    height: 150px;
+}
+
+header {
+    /* position: fixed; */
+    /* z-index: 3; */
+}
+
+.nav_containar {
+    position: fixed;
+    z-index: 3;
+    transition: 1s;
+}
+
+/*スクロールしたときにヘッダー部の背景色を変える*/
+.nav_containar.transform {
+    background-color: #ffffffdf;
+height: 13%;
+/* transition: 1s; */
+}
+#menu .logo img.transform{
+    width:200px;
+    transition: 1s;
+}
+#menu .logo.transform {
+    position: absolute;
+    top: 20;
+    left: -30px;
+    transition: 1s;
+}
+header .title {
+    color: #ffffff;
+    width: 150px;
+    height: 70px;
+    position: absolute;
+    /* top:10px;
+    left:50%; */
+    top: calc(50% - 35px);
+    left: calc(50% - 75px);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+header .title p {
+    text-align: center;
+    font-size: 1.7em;
+    font-family: 'Dancing Script', cursive;
+
+}
+
+#menu {
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+
+#menu .menu_area {
+    overflow: hidden;
+    width: 70%;
+    height: 100px;
+    position: relative;
+}
+
+
+#menu .logo img {
+    width: 250px;
+    height: 100%;
+    /* opacity: 0; */
+}
+
+#menu .logo {
+    position: absolute;
+    top: 10;
+    left: -50px;
+}
+
+
+#menu .menu_area_sp .menu {
+    width: 200px;
+    height: 100vh;
+    background-color: rgba(44, 44, 44, 0.599);
+    position: fixed;
+    top: 0;
+    left: -300px;
+    transition: 1s;
+
+}
+
+#menu .menu.active {
+    transition: 1s;
+    left: 0px;
+}
+
+
+/*PC版のナビゲーションメニューの並べ方の設定*/
+#menu .menu_area .menu ul {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/*スマホ版のナビゲーションメニューの並べ方の設定*/
+#menu .menu_area_sp .menu ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#menu .menu ul li {
+
+    padding-left: 0;
+    margin-left: 10px;
+}
+
+/*PC版のナビゲーションメニューの文字の色*/
+#menu .menu_area .menu ul li a {
+    text-decoration: none;
+    color: #000000c3;
+    font-family: 'Noto Serif JP', serif;
+}
+
+#menu .menu_area .menu ul li a:hover {
+    transition: 1s;
+    color: rgb(217, 130, 16);
+}
+
+/*スマホ版のナビゲーションメニューの文字の色*/
+#menu .menu_area_sp .menu ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Noto Serif JP', serif;
+}
+
+#menu .menu_area_sp .menu ul li a:hover {
+    transition: 1s;
+    color: rgb(217, 130, 16);
+}
+
+.menu_img {
+    width: 100%;
+    height: 150px;
+    background-image: url(../img/pasta1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0px 5px 4px #ffd470a6;
+
+}
+
+.menu_img:before {
+    content: '';
+    background: inherit;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+    position: absolute;
+    top: -20px;
+    /* left: -5px;
+    right: -5px; */
+    bottom: -5px;
+    z-index: -1;
+}
+
+/* .merchandise {
+ 
+    margin-top: 90px;
+    margin-bottom: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+} */
+
+.merchandise {
+ 
+    margin-top: 90px;
+    margin-bottom: 50px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+
+}
+/*パスタとサイドメニューのタブの設定*/
+.merchandise_tab{
+    position: relative;
+    margin-top: 50px;
+    width: 100%;
+}
+.merchandise_tab ul{
+    position: absolute;
+    top: -39px;
+    /* left:center; */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.merchandise_tab ul li{  
+    list-style: none;
+    width: 45%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 2px solid rgb(255, 193, 105);
+    border-right: 2px solid rgb(255, 193, 105);
+    border-left: 2px solid rgb(255, 193, 105);
+    border-top-left-radius:10px ;
+    border-top-right-radius:10px ;
+}
+.merchandise_tab ul li a{
+    text-decoration: none;
+
+}
+.merchandise_tab ul li a h3{
+    text-align: center;
+    color:#000;
+}
+/*押されたとこのタブだけが背景を白にして.merchandise_tabと.merchandise　sectionの重なってるとこのborderの線が消えて見えるようにした*/
+.merchandise_tab ul li.active{
+    background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 193, 105);
+    /* background-color:rgb(198, 198, 198); */
+}
+
+
+/*タブで分けたパスタとサイドメニューの切り替え設定*/
+/* .merchandise section{
+    display: none;
+    overflow: hidden;
+    
+    transition: 1s;
+} */
+
+.merchandise section{
+    width: 100%;
+    border-top: 2px solid rgb(255, 193, 105);
+    border-right: 2px solid rgb(255, 193, 105);
+    border-left: 2px solid rgb(255, 193, 105);
+    border-bottom: 2px solid rgb(255, 193, 105);
+    position: absolute;
+    top:0;
+    left: 0;
+    
+    visibility:hidden;
+    /* overflow: hidden; */
+    transform: scale(1.0 , 0);
+    transform-origin: top;
+    /* height: 0; */
+    transition: 1s;
+}
+
+/*タブが押されたときその内容の.merchandise sectionをz-indexで.merchandise_tab ulより下に表示させてborderの線を.merchandise_tab ul（.merchandise_tab ulの背景を白で塗っているので）と重なったとこだけ表示させないようにした*/
+/* .merchandise section.active{
+   
+    display: block;
+   
+    border-top: 2px solid rgb(255, 193, 105);
+    border-right: 2px solid rgb(255, 193, 105);
+    border-left: 2px solid rgb(255, 193, 105);
+    border-bottom: 2px solid rgb(255, 193, 105);
+    z-index: -1;
+    transition: 1s;
+} */
+
+.merchandise section.active{
+    height: 100vh;
+    visibility:visible;
+   
+    
+    border-top: 2px solid rgb(255, 193, 105);
+    border-right: 2px solid rgb(255, 193, 105);
+    border-left: 2px solid rgb(255, 193, 105);
+    border-bottom: 2px solid rgb(255, 193, 105);
+    transform: scale(1.0 , 1.0);
+    transform-origin: top;
+    z-index: -1;
+    transition: 1s;
+}
+
+/* section{
+    display: none;
+}
+section.active{
+    display: block;
+} */
+
+
+.merchandise .pasuta_area{
+    padding-bottom:50px;
+    padding-top: 50px;
+}
+
+
+.merchandise .pasuta_area .pasta ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.merchandise .pasuta_area .pasta ul li {
+    list-style: none;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: 2px solid #ff7b00;
+    margin: 10px;
+}
+
+.merchandise .pasuta_area .pasta ul li a {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    width: 100%;
+    height: fit-content;
+    color: #e55f00;
+    box-shadow: 2px 2px 5px #ff6a00;
+}
+
+/*パスタの写真の大きさ設定*/
+.merchandise .pasuta_area .pasta ul li a img {
+    width: 100%;
+    height: 100%;
+
+}
+
+/*パスタの写真の枠の大きさ設定*/
+.merchandise .pasuta_area .pasta ul li a .pasta_img {
+    position: relative;
+    width: 100%;
+    height: 70%;
+}
+
+/*パスタの写真の下にぼかしを書ける*/
+.merchandise .pasuta_area .pasta ul li a .pasta_img:before {
+    position: absolute;
+    top: 88%;
+    right: 0;
+    content: "";
+    width: 100%;
+    height: 13%;
+    background: linear-gradient(360deg, #fff 30%, transparent);
+}
+
+.title_area {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    z-index: 1;
+    width: 100%;
+    height: 90%;
+}
+
+.sub_title {
+
+    text-align: right;
+    margin-right: 10px;
+    font-size: 1.1em;
+    /* white-space: nowrap; */
+}
+
+.title {
+    margin: 10px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    font-size: 1.4em;
+    /* white-space: nowrap; */
+}
+
+.side_menu_area {
+    display: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+/* section{
+    display: none;
+}
+section.active{
+    display: block;
+} */
+.side_menu_title h2 {
+    width: 150px;
+    font-size: 1.2em;
+    text-align: center;
+    background-color: #ffffff;
+    /* z-index: 2; */
+}
+
+.side_menu_title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: #e55f00;
+    width: 100%;
+    position: relative;
+
+
+
+}
+
+.side_menu_title::after {
+    content: '';
+    position: absolute;
+    top: calc(50% - 2.5px);
+    /* top:50%; */
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #e55f00;
+    overflow: hidden;
+    z-index: -1;
+
+}
+
+.sub_menu {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    color: #e55f00;
+    padding-bottom:50px;
+}
+.sub_menu ul li{
+    margin-top: 25px;
+}
+.side_menu_sub_title {
+    margin: 20px;
+    margin-bottom: 30px;
+}
+
+.sarada_menu li div,
+.desart_menu li div,
+.drink_menu li div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* .bottom_space{
+    width: 100%;
+    height: 30px;
+    background-color: #e08b3c;
+} */
+@media(min-width:768px) {
+    #menu .menu_area {
+        overflow: visible;
+
+    }
+
+    #menu .logo img {
+        width: 250px;
+        height: 100%;
+        opacity: 1;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: #ffffff;
+        width: 73%;
+        height: 30px;
+        opacity: 0.6;
+        border-radius: 40px;
+        position: absolute;
+        top: 10px;
+        left: 15%;
+        /* position: relative; */
+        /* position: absolute;
+        top:10px;
+        right:px; */
+        /* overflow: hidden; */
+    }
+
+    /*スクロールしたときにナビゲーションの背景や色を変える*/
+    .menu.transform {
+        border-radius: 0px;
+        background-color: #ffffff00;
+        /* color: #ff6a00ad; */
+    }
+
+    header .nav_containar .menu ul li.transform {
+        color: #ff6a00ad;
+        list-style: none;
+        /* border-right:1px solid #000000 ; */
+    }
+
+
+    /*パスタのメニュの並びをはみ出した要素を二段目位に折り返し表示する*/
+    .merchandise .pasuta_area .pasta ul {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        /* align-items: center; */
+
+    }
+
+    /*一行に三つ表示したいのでliの一つの横幅の大きさを全体の30％にして表示する*/
+    .merchandise .pasuta_area .pasta ul li {
+        list-style: none;
+        width: 30%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        border: 2px solid #ff7b00;
+        margin: 10px;
+    }
+
+
+    .sub_title {
+
+        text-align: right;
+        margin-right: 10px;
+        font-size: 1.8vmin;
+        white-space: nowrap;
+    }
+
+    .title {
+        margin: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        font-size: 2vw;
+        white-space: nowrap;
+    }
+
+    .sub_menu {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .sarada,
+    .desart,
+    .drink {
+        width: 28%;
+    }
+}

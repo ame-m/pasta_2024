@@ -1,0 +1,126 @@
+.access_containar{
+    margin-top:100px ;
+    margin-bottom:100px ;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.access_containar .tab,
+.access_containar .access{
+    width: 80%;
+}
+.access_containar .tab{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+}
+.access_containar .access{
+    list-style: none;
+}
+.access_containar .tab li{
+    width: 45%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 2px solid rgb(255, 168, 45);
+    border-right: 2px solid rgb(255, 168, 45);
+    border-left: 2px solid rgb(255, 168, 45);
+    border-top-left-radius:10px ;
+    border-top-right-radius:10px ;
+}
+/* .access_containar .tab li:nth-of-type(1){
+    background-color: grey;
+}  */
+.access_containar .tab li.active{
+    background-color: rgb(255, 168, 45);
+
+}
+.access_containar .access li{
+    display: none;
+    width: 100%;
+    /* height: 80%; */
+}
+/* .access_containar .access li:nth-of-type(1){
+display:flex;
+} */
+
+.access_containar .access li.active{
+display:flex;
+flex-direction: row;
+justify-content: center;
+background-color: rgb(255, 168, 45);
+}
+.access_info{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.access_info_title{
+    margin-bottom: 20px;
+}
+.access_containar ul li a{
+    text-decoration: none;
+    color: #000;
+}
+.access_containar ul li a h3{
+    text-align: center;
+    font-size: 1.3em;
+}
+.access_info dl div{
+    display: flex;
+    margin-top: 10px;
+}
+.access_info_contents{
+    margin-bottom: 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+} 
+.access_info_img{
+   width: 40%; 
+}
+.access_info_img img{
+    width: 100%;
+}
+.access_info_data{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+margin-left: 15px;
+ }
+ 
+.access_map iframe{
+    width: 100%;
+
+
+}
+.access_map{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 80%;
+}
+
+@media(min-width:768px) {
+    .access_info_contents{
+        margin-bottom: 15px;
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+      
+    } 
+    .access_info_data{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 50%; 
+    margin-left: 15px;
+     }
+}
